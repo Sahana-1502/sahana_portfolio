@@ -57,7 +57,7 @@ const Navbar: React.FC<NavbarProps> = ({ onNavigate }) => {
 
           {/* Resume Button with Correct GitHub Pages Path */}
           <a 
-            href="/sahana_portfolio/resume.pdf" 
+            href="/sahana_portfolio/resume.pdf?v=2"
             target="_blank" 
             rel="noopener noreferrer" 
             className="flex items-center gap-2 px-3 py-1.5 md:px-4 md:py-2 bg-[#00ff9f]/10 text-[#00ff9f] border border-[#00ff9f]/50 rounded hover:bg-[#00ff9f]/20 transition-all text-[10px] md:text-xs font-mono whitespace-nowrap ml-2"
