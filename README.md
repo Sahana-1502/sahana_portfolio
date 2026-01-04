@@ -1,20 +1,39 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# Sahana Prabhu | Interactive Engineering Portfolio
 
-# Run and deploy your AI Studio app
+![Status](https://img.shields.io/badge/Status-Deployed-success)
+![Build](https://img.shields.io/badge/Build-Passing-success)
+![Tech](https://img.shields.io/badge/Stack-React%20%7C%20TypeScript%20%7C%20Vite-blue)
 
-This contains everything you need to run your app locally.
+## ⚡ System Overview
+This portfolio is designed as a **hybrid command-line interface (CLI) and visual data pipeline**, representing the intersection of low-level hardware control and high-level AI orchestration.
 
-View your app in AI Studio: https://ai.studio/apps/temp/1
+It serves as a central hub for my work in **Agentic AI, Digital Verification (UVM), and Data Engineering**, featuring an interactive terminal for navigation and a scrollytelling experience for project visualization.
 
-## Run Locally
+**[🚀 View Live Portfolio](https://sahana-portfolio.vercel.app)** *(Note: Link will be active once deployed via Vercel)*
 
-**Prerequisites:**  Node.js
+## 🛠️ Architecture & Tech Stack
+Built with performance and type safety in mind.
 
+* **Framework:** React (v18) + Vite
+* **Language:** TypeScript
+* **Styling:** Tailwind CSS (Utility-first architecture)
+* **Animation:** Framer Motion (Orchestrating the data pipeline flows)
+* **Icons:** Lucide React
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+## 📂 Key Features
+* **Terminal Emulator:** Fully functional CLI entry point with command parsing (`help`, `run pipeline`, `whoami`).
+* **Visual Data Pipeline:** Interactive nodes representing the flow from Hardware/Ingestion → Processing → AI/Models → Deployment.
+* **Responsive Layout:** Adapts from desktop "Control Center" view to mobile-optimized vertical stacks.
+
+## 🚀 Local Development
+To run this project locally on your machine:
+
+```bash
+# 1. Clone the repository
+git clone [https://github.com/Sahana-1502/sahana_portfolio.git](https://github.com/Sahana-1502/sahana_portfolio.git)
+
+# 2. Install dependencies
+npm install
+
+# 3. Start the development server
+npm run dev
