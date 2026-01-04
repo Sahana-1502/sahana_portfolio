@@ -9,13 +9,7 @@ export default defineConfig(({ mode }) => {
     // DEPLOYMENT CONFIG (Add this section)
     // -----------------------------------------------------------------------
     
-    // OPTION A: For Vercel or Netlify (Recommended)
-    // Keep this line commented out:
-    // base: "/sahana_portfolio/",
-
-    // OPTION B: For GitHub Pages
-    // If deploying to github.io, UNCOMMENT the line below:
-    // base: "/sahana_portfolio/",
+    base: "/sahana_portfolio/",
     
     // -----------------------------------------------------------------------
 
