@@ -1,7 +1,7 @@
-
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { COLORS } from '../constants';
+// 1. Add this import for the icon
+import { FileText } from 'lucide-react'; 
 
 interface NavbarProps {
   onNavigate: (targetId: string) => void;
@@ -16,21 +16,17 @@ const Navbar: React.FC<NavbarProps> = ({ onNavigate }) => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  // 2. I removed 'resume' from this list so we can style it separately
   const navItems = [
     { label: '[ ./education ]', id: 'education' },
     { label: '[ ./projects ]', id: 'pipeline' },
     { label: '[ ./experience ]', id: 'experience' },
-    { label: '[ ./resume.pdf ]', id: 'resume' },
     { label: '[ ./contact ]', id: 'footer' },
   ];
 
   const handleClick = (e: React.MouseEvent, id: string) => {
     e.preventDefault();
     e.stopPropagation();
-    if (id === 'resume') {
-      window.open('https://Sahana-1502.github.io/Sahana_Prabhu_Resume.pdf', '_blank');
-      return;
-    }
     onNavigate(id);
   };
 
@@ -57,6 +53,19 @@ const Navbar: React.FC<NavbarProps> = ({ onNavigate }) => {
               {item.label}
             </button>
           ))}
+
+          {/* 3. NEW DISTINCT RESUME BUTTON START */}
+          <a 
+            href="/resume.pdf" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="flex items-center gap-2 px-3 py-1.5 md:px-4 md:py-2 bg-[#00ff9f]/10 text-[#00ff9f] border border-[#00ff9f]/50 rounded hover:bg-[#00ff9f]/20 transition-all text-[10px] md:text-xs font-mono whitespace-nowrap ml-2"
+          >
+            <FileText className="w-3 h-3 md:w-4 md:h-4" />
+            <span>[ ./resume.pdf ]</span>
+          </a>
+          {/* NEW DISTINCT RESUME BUTTON END */}
+
         </div>
       </div>
     </motion.nav>
