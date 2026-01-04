@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-// 1. Add this import for the icon
-import { FileText } from 'lucide-react'; 
+import { FileText } from 'lucide-react';
 
 interface NavbarProps {
   onNavigate: (targetId: string) => void;
@@ -16,7 +15,7 @@ const Navbar: React.FC<NavbarProps> = ({ onNavigate }) => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // 2. I removed 'resume' from this list so we can style it separately
+  // Defined nav items (Resume is handled separately below)
   const navItems = [
     { label: '[ ./education ]', id: 'education' },
     { label: '[ ./projects ]', id: 'pipeline' },
@@ -39,10 +38,12 @@ const Navbar: React.FC<NavbarProps> = ({ onNavigate }) => {
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
+        {/* Logo Section */}
         <div className="font-mono text-[#00f3ff] text-xs md:text-sm font-bold tracking-tighter cursor-default select-none">
           sahana@uoftece:~$ <span className="text-white hidden sm:inline">cat architect_profile</span>
         </div>
         
+        {/* Navigation Items */}
         <div className="flex gap-2 md:gap-6 items-center">
           {navItems.map((item) => (
             <button
@@ -54,9 +55,9 @@ const Navbar: React.FC<NavbarProps> = ({ onNavigate }) => {
             </button>
           ))}
 
-          {/* 3. NEW DISTINCT RESUME BUTTON START */}
+          {/* Resume Button with Correct GitHub Pages Path */}
           <a 
-            href="/resume.pdf" 
+            href="/sahana_portfolio/resume.pdf" 
             target="_blank" 
             rel="noopener noreferrer" 
             className="flex items-center gap-2 px-3 py-1.5 md:px-4 md:py-2 bg-[#00ff9f]/10 text-[#00ff9f] border border-[#00ff9f]/50 rounded hover:bg-[#00ff9f]/20 transition-all text-[10px] md:text-xs font-mono whitespace-nowrap ml-2"
@@ -64,7 +65,6 @@ const Navbar: React.FC<NavbarProps> = ({ onNavigate }) => {
             <FileText className="w-3 h-3 md:w-4 md:h-4" />
             <span>[ ./resume.pdf ]</span>
           </a>
-          {/* NEW DISTINCT RESUME BUTTON END */}
 
         </div>
       </div>
